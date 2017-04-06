@@ -97,9 +97,9 @@ if (!htmlspecialchars($_GET["seed"])) : ?>
 
 			// Check if the user has scrolled past the limit (they've hit the bottom of the page)
 			echo "		if (window.scrollY >= limit)";
-		    echo "			print_images($seed);";
-		    echo "		}";
-		    echo "	);";
+			echo "			print_images($seed);";
+			echo "		}";
+			echo "	);";
 
 			// After setting up the scroll checker, create a variable
 			// for tracking how many times we've printed images
@@ -125,7 +125,7 @@ if (!htmlspecialchars($_GET["seed"])) : ?>
 	// Outputs an image in a container
 	function print_image($img_location, $id)
 	{
-		$img_location = substr($img_location, strlen($_SERVER["DOCUMENT_ROOT"]));
+		//$img_location = substr($img_location, strlen($_SERVER["DOCUMENT_ROOT"]));
 
 		echo "<div class='container'>";
 		if (strstr($img_location, ".webm") == NULL)
